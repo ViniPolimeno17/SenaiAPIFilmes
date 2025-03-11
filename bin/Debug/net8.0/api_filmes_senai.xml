@@ -4,12 +4,96 @@
         <name>api_filmes_senai</name>
     </assembly>
     <members>
+        <member name="M:api_filmes_senai.Controllers.FilmeController.Get">
+            <summary>
+            Endpoint para Listar os filmes
+            </summary>
+            <returns>Listar filmes</returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.FilmeController.Post(api_filmes_senai.Domains.Filme)">
+            <summary>
+            Endpoint para Cadastrar um novo Filme
+            </summary>
+            <param name="novoFilme">Cadastrar um novo Filme</param>
+            <returns>Cadastrar um novoFilme</returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.FilmeController.GetById(System.Guid)">
+            <summary>
+            Endpoint para buscar um Filme pelo Id
+            </summary>
+            <param name="id">Id do Filme buscado</param>
+            <returns>Filme Buscado</returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.FilmeController.Put(System.Guid,api_filmes_senai.Domains.Filme)">
+            <summary>
+            Endpoint para Atualizar um Filme
+            </summary>
+            <param name="id">Atualizar um Filme</param>
+            <param name="filme">Atualizar um Filme</param>
+            <returns>Atualizar um filme</returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.FilmeController.Delete(System.Guid)">
+            <summary>
+            Endpoint para cadastrar um novo Filme
+            </summary>
+            <param name="id">Cadastrar um novo Filme</param>
+            <returns>Deletar um filme</returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.FilmeController.GetByGenero(System.Guid)">
+            <summary>
+            Endpoint para listar por genero um Filme
+            </summary>
+            <param name="id">Listar por genero um Filme</param>
+            <returns>lista por genero um Filme</returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.GeneroController.Get">
+            <summary>
+            Endpoint para Listar os generos
+            </summary>
+            <returns>Listar generos</returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.GeneroController.Post(api_filmes_senai.Domains.Genero)">
+            <summary>
+            Endpoint para Cadastrar um novo Genero
+            </summary>
+            <param name="novoGenero">Cadastrar um novo Genero</param>
+            <returns>Cadastrar um novoGenero</returns>
+        </member>
         <member name="M:api_filmes_senai.Controllers.GeneroController.GetById(System.Guid)">
             <summary>
             Endpoint para buscar um Gênero pelo Id
             </summary>
             <param name="id">Id do Gênero buscado</param>
             <returns>Gênero Buscado</returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.GeneroController.Put(System.Guid,api_filmes_senai.Domains.Genero)">
+            <summary>
+            Endpoint para Atualizar um Genero
+            </summary>
+            <param name="id">Atualizar um Genero</param>
+            <param name="genero">Atualizar um Genero</param>
+            <returns>Atualizar um genero</returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.GeneroController.Delete(System.Guid)">
+            <summary>
+            Endpoint para cadastrar um novo Genero
+            </summary>
+            <param name="id">Cadastrar um novo Genero</param>
+            <returns>Deletar um genero</returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.UsuarioController.Post(api_filmes_senai.Domains.Usuario)">
+            <summary>
+            Endpoint para Cadastrar um novo Usuario
+            </summary>
+            <param name="usuario">Cadastrar um novo Usuario</param>
+            <returns>Cadastrar um novoUsuario</returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.UsuarioController.GetById(System.Guid)">
+            <summary>
+            Endpoint para buscar o id do Usuario
+            </summary>
+            <param name="id">Buscar id do Usuario</param>
+            <returns>buscar pelo id do usuario</returns>
         </member>
         <member name="P:api_filmes_senai.Domains.Filme.IdGenero">
             <summary>
