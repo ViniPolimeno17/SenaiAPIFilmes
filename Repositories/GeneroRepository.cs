@@ -80,11 +80,6 @@ namespace api_filmes_senai.Repositories
             }
         }
 
-        public void Cadastrar(GeneroController novoGenero)
-        {
-            throw new NotImplementedException();
-        }
-
         public List<Genero> Listar()
         {
             try

@@ -13,7 +13,7 @@ namespace api_filmes_senai.Controllers
     public class FilmeController : ControllerBase
     {
         private readonly IFilmeRepository _filmeRepository;
-
+        
         public FilmeController(IFilmeRepository filmeRepository)
         {
             _filmeRepository = filmeRepository;
@@ -77,7 +77,7 @@ namespace api_filmes_senai.Controllers
             }
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult Delete(Guid id)
         {
             try
@@ -88,7 +88,23 @@ namespace api_filmes_senai.Controllers
             }
             catch (Exception e)
             {
-                return BadRequest(e.Message); 
+                return BadRequest(e.Message);
+            }
+        }
+
+        [HttpGet("ListarPorGenero/{id}")]
+
+        public IActionResult GetByGenero(Guid id) 
+        {
+            try
+            {
+                List<Filme> listaDeFilmePorGenero = _filmeRepository.ListarPorGenero(id);
+
+                return Ok(listaDeFilmePorGenero);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
             }
         }
     }

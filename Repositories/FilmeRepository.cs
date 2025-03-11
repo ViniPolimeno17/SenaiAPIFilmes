@@ -80,7 +80,6 @@ namespace api_filmes_senai.Repositories
                 throw;
             }
         }
-
         public List<Filme> Listar()
         {
             try
